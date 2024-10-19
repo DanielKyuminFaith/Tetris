@@ -7,7 +7,6 @@ from shapeFactory import ShapeFactory
 
 
 
-
 def getNewShapeOfSameType(shape):
     newShape = None
     if isinstance(shape, IShape):
@@ -56,13 +55,11 @@ def main():
     shapeFactory = ShapeFactory()
     
 
-
     board = Board(x = 200, y = 25, width = 380, height = 750, gridWidth = 10, gridHeight = 20)
     shape = shapeFactory.randomizer()
     q = [shapeFactory.randomizer(), shapeFactory.randomizer(), shapeFactory.randomizer()]
     
     
-
 
     lockedShape = LockedShape()
 
@@ -124,7 +121,6 @@ def main():
                 if event.key == pygame.K_l:
                     shape.rotateRight(lockedShape)
 
-
                         
             if event.type == pygame.KEYUP:
                 if event.key == pygame.K_a: 
@@ -175,7 +171,6 @@ def main():
         if shape.tooFar == True:
             for piece in shape.pieces:
                 if piece[1] < 1:
-
                     finalScoreVariable = score
                     finalScore = font.render("Final Score: " + str(finalScoreVariable), True, (255, 255, 255))
                     gameOver = font.render("GAME OVER", True, (255, 0, 0))
