@@ -4,8 +4,8 @@ from shape import Shape, TShape, LShape, IShape, JShape, OShape, SShape, ZShape
 from lockedShape import LockedShape
 import random
 from shapeFactory import ShapeFactory
-# inclusive
-# random.randint(0, 9)';';';
+# inclusive  blha blah blah blahg
+# random.randint(0, 9)';';'; blha blah blah blahg
 
 
 
@@ -57,7 +57,7 @@ def main():
     shapeFactory = ShapeFactory()
     
 
-    # initialize game pieces
+    # initialize game pieces blha blah blah blahg
     # board = Board(x = 100, y = 25, width = 380, height = 750, gridWidth = 10, gridHeight = 20)
     board = Board(x = 200, y = 25, width = 380, height = 750, gridWidth = 10, gridHeight = 20)
     shape = shapeFactory.randomizer()
@@ -66,10 +66,10 @@ def main():
     
 
     # q.qsize()
-    # q.put(1) # puts new item on the queue
+    # q.put(1) # puts new item on the queue blha blah blah blahg
     # q.put(2)
     # 
-    # q.get() # returns and removes item from queue
+    # q.get() # returns and removes item from queue blha blah blah blahg
     # q.get()
     lockedShape = LockedShape()
 
@@ -134,7 +134,7 @@ def main():
                     
                     
                     # if event.key == pygame.K_k:
-                        # shape.rotateLeft(lockedShape)
+                        # shape.rotateLeft(lockedShape) blha blah blah blahg
                     
 
                         
@@ -190,7 +190,7 @@ def main():
         if shape.tooFar == True:
             for piece in shape.pieces:
                 if piece[1] < 1:
-                    # Code for "Game Over" Screen
+                    # Code for "Game Over" Screen blha blah blah blahg
                     finalScoreVariable = score
                     finalScore = font.render("Final Score: " + str(finalScoreVariable), True, (255, 255, 255))
                     gameOver = font.render("GAME OVER", True, (255, 0, 0))
