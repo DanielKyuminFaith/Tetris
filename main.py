@@ -4,8 +4,7 @@ from shape import Shape, TShape, LShape, IShape, JShape, OShape, SShape, ZShape
 from lockedShape import LockedShape
 import random
 from shapeFactory import ShapeFactory
-# inclusive
-# random.randint(0, 9)';';';
+
 
 
 
@@ -57,20 +56,14 @@ def main():
     shapeFactory = ShapeFactory()
     
 
-    # initialize game pieces
-    # board = Board(x = 100, y = 25, width = 380, height = 750, gridWidth = 10, gridHeight = 20)
+
     board = Board(x = 200, y = 25, width = 380, height = 750, gridWidth = 10, gridHeight = 20)
     shape = shapeFactory.randomizer()
     q = [shapeFactory.randomizer(), shapeFactory.randomizer(), shapeFactory.randomizer()]
     
     
 
-    # q.qsize()
-    # q.put(1) # puts new item on the queue
-    # q.put(2)
-    # 
-    # q.get() # returns and removes item from queue
-    # q.get()
+
     lockedShape = LockedShape()
 
     A_KeyPressed = False
@@ -130,17 +123,11 @@ def main():
                     
                 if event.key == pygame.K_l:
                     shape.rotateRight(lockedShape)
-                    # if variabe is less than or 3, then do +=1 one, if it is 3, set to 0 ';A                    
-                    
-                    
-                    # if event.key == pygame.K_k:
-                        # shape.rotateLeft(lockedShape)
-                    
+
 
                         
             if event.type == pygame.KEYUP:
                 if event.key == pygame.K_a: 
-                    # shape.left()
                     A_KeyPressed = False     
                     heldLongEnough = False
                 if event.key == pygame.K_d:
@@ -184,18 +171,15 @@ def main():
         
         if heldShape != None:
             board.drawHeldShape(canvas,  heldShape.color, heldShape.pieces)
-            
-        # board.drawPhantom(canvas, shape)
 
         if shape.tooFar == True:
             for piece in shape.pieces:
                 if piece[1] < 1:
-                    # Code for "Game Over" Screen
+
                     finalScoreVariable = score
                     finalScore = font.render("Final Score: " + str(finalScoreVariable), True, (255, 255, 255))
                     gameOver = font.render("GAME OVER", True, (255, 0, 0))
 
-                    # Running = False
 
 
             lockedShape.shapes.append(shape)
